@@ -9,15 +9,22 @@ function update() {
 	c.height = size;
 
 	draw();
-	if (pauseToggleEl.checked) {
-		if (Math.floor(num * 100 ) / 100 == Math.floor(num) && pause < 50) {
-			pause += 1;
+	if (morphToggleEl.checked){
+		if (pauseToggleEl.checked) {
+			if (Math.floor(num * 100)/100 == Math.floor(num) && pause < 50) {
+				pause += 1;
+			} else {
+				pause = 0;
+				fakeNum ++
+				num += 0.01;
+			}
 		} else {
-			pause = 0;
 			num += 0.01;
+			fakeNum ++
 		}
-	} else {
-		num += 0.01;
 	}
-	setTimeout(update,50);
+	if (shapeToggleEl.checked){
+		sinMult += 0.01
+	}
+	requestAnimationFrame(update);
 }
