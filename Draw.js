@@ -1,15 +1,15 @@
 function draw() {
 	ctx.clearRect(0, 0, size, size);
-	for (i = 0; i < (num); i++) {
-		for (j = i; j < (num); j++) {
-			var start = ((Math.PI * 2) / (num)) * i;
-			var end = ((Math.PI * 2) / (num)) * j;
+	for (i = 0; i < (num - 0.01); i++) {
+		for (j = i; j < (num - 0.01); j++) {
+			var start = ((Math.PI * 2) / (num - 0.01)) * i;
+			var end = ((Math.PI * 2) / (num - 0.01)) * j;
 			ctx.beginPath();
 			ctx.moveTo(
-				Math.sin(start) * mult + size / 2,
-				Math.cos(start) * mult + size / 2
+				Math.sin(start*sinMult) * mult + size / 2,
+				Math.cos(start*cosMult) * mult + size / 2
 			);
-			ctx.lineTo(Math.sin(end) * mult + size / 2, Math.cos(end) * mult + size / 2);
+			ctx.lineTo(Math.sin(end*sinMult) * mult + size / 2, Math.cos(end*cosMult) * mult + size / 2);
 			if (colorToggleEl.checked) {
 				ctx.strokeStyle = `hsl(${(360 / num) * j}, 100%, 50%)`;
 			} else {
