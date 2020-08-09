@@ -19,5 +19,5 @@ function update() {
 	} else {
 		num += 0.01;
 	}
-	requestAnimationFrame(update);
+	setTimeout(update,50);
 }
