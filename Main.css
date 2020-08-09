@@ -32,6 +32,12 @@ p {
 .nightMode {
   transform: translateY(120px);
 }
+.morph {
+  transform: translateY(150px);
+}
+.shape {
+  transform: translateY(180px);
+}
 button{
   outline: none;
   font-size: 22px;
