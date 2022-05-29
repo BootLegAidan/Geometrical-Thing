@@ -8,6 +8,7 @@ var colorToggleEl = document.getElementById("colorToggle");
 var nightModeToggleEl = document.getElementById('nightModeToggle')
 var morphToggleEl = document.getElementById('morphToggle')
 var shapeToggleEl = document.getElementById('shapeToggle')
+var directionToggleEl = document.getElementById('incrementDirectionToggle')
 let root = document.documentElement;
 
 reset.onclick = function () {
