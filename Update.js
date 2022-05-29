@@ -1,4 +1,12 @@
 function update() {
+	if (directionToggleEl.checked){
+		dirMod=-1
+		if(num<=0){
+			dirMod=0
+		}
+	} else {
+		dirMod=1
+	}
 	if (window.innerHeight > window.innerWidth) {
 		size = window.innerWidth;
 	} else {
@@ -16,10 +24,10 @@ function update() {
 			} else {
 				pause = 0;
 				fakeNum ++
-				num += 0.01;
+				num += 0.01*dirMod;
 			}
 		} else {
-			num += 0.01;
+			num += 0.01*dirMod;
 			fakeNum ++
 		}
 	}
